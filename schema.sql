@@ -6,7 +6,7 @@ DROP TABLE stats;
 DROP TABLE playerStats;
 DROP TABLE nation;
 
-CREATE TABLE season (
+CREATE TABLE seasons (
     s_seasonkey INT PRIMARY KEY,
     s_name VARCHAR(25) not null
 );
