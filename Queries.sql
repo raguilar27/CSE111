@@ -7,7 +7,9 @@ DROP TABLE playerStats;
 DROP TABLE nation;
 
 /*1. What teams where in group A?*/
-
+Select c_name
+From matches
+Where m_group='A';
 
 
 /*2. What nation(s) where the teams from group C?*/
