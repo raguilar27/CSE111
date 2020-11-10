@@ -88,6 +88,8 @@ INSERT INTO nation VALUES(26, 'SWITZERLAND');
 INSERT INTO nation VALUES(27, 'TURKEY');
 INSERT INTO nation VALUES(28, 'UKRAINE');
 
+/*Data for club*/
+INSERT INTO club VALUES(1, '',1 , 1);
 
 
 
@@ -107,14 +109,12 @@ INSERT INTO nation VALUES(28, 'UKRAINE');
 
 
 
-
-/*1. What teams where in group A? in the 2011 season*/
+/*1. What teams where in group A? in the 2010/2011 season*/
 Select DISTINCT c_name
 From matches, club, clubStats, seasons
 Where m_group='A'
     AND s_name = '2010/2011 Season'
-    AND s_seasonkey = c_seasonkey
-    AND s_seasonkey = m_matchkey
+    AND s_seasonkey = cs_seasonkey
     AND m_matchkey = cs_matchkey
     AND cs_clubkey = c_clubkey;
 
