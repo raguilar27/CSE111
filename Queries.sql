@@ -36,10 +36,23 @@ DELETE FROM nation;
 .separator ","
 .import '| tail -n +94 data/16champs.csv' matches
 
-/*1. What teams where in group A?*/
-Select c_name
-From matches
-Where m_group='A';
+INSERT INTO season VALUES(11, '2010/2011 Season');
+INSERT INTO season VALUES(12, '2011/2012 Season');
+INSERT INTO season VALUES(13, '2012/2013 Season');
+INSERT INTO season VALUES(14, '2013/2014 Season');
+INSERT INTO season VALUES(15, '2014/2015 Season');
+INSERT INTO season VALUES(16, '2015/2016 Season');
+
+
+/*1. What teams where in group A? in the 2011 season*/
+Select DISTINCT c_name
+From matches, club, clubStats, season
+Where m_group='A'
+    AND s_name = '2010/2011 Season'
+    AND s_seasonkey = c_seasonkey
+    AND s_seasonkey = m_matchkey
+    AND m_matchkey = cs_matchkey
+    AND cs_clubkey = c_clubkey;
 
 
 /*2. What nation(s) where the teams from group C?*/
