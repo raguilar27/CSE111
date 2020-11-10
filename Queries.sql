@@ -13,7 +13,9 @@ Where m_group='A';
 
 
 /*2. What nation(s) where the teams from group C?*/
-
+Select c_nationkey
+From club
+Where m_group='C';
 
 
 /*3. What teams won games during the group stage?*/
