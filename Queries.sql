@@ -148,8 +148,12 @@ Where m_stage='Final';
 
 /*8. What teams are from Spain and played in the knockout stage?*/
 Select c_name
-From club
-Where c_nationkey='Esp';
+From club, nation, matches, clubStats
+Where n_name = 'SPAIN'
+    AND c_nationkey = n_nationkey
+    AND cs_clubkey = c_clubkey
+    AND cs_matchkey = m_matchkey
+    AND m_stage = 'Knockout';
 
 
 /*9. What were the mations of the teams that played in the final?*/
