@@ -62,7 +62,7 @@ INSERT INTO stats VALUES(12, 'Club Stats 2015/2016', 16);
 
 /*1. What teams where in group A? in the 2011 season*/
 Select DISTINCT c_name
-From matches, club, clubStats, season
+From matches, club, clubStats, seasons
 Where m_group='A'
     AND s_name = '2010/2011 Season'
     AND s_seasonkey = c_seasonkey
