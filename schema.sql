@@ -53,6 +53,7 @@ CREATE TABLE clubStats (
 
 CREATE TABLE stats (
     st_statkey INT PRIMARY KEY,
+    st_statype VARCHAR(50),
     st_seasoneky INT NOT NULL
 );
 
