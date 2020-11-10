@@ -36,12 +36,28 @@ DELETE FROM nation;
 .separator ","
 .import '| tail -n +94 data/16champs.csv' matches
 
-INSERT INTO season VALUES(11, '2010/2011 Season');
-INSERT INTO season VALUES(12, '2011/2012 Season');
-INSERT INTO season VALUES(13, '2012/2013 Season');
-INSERT INTO season VALUES(14, '2013/2014 Season');
-INSERT INTO season VALUES(15, '2014/2015 Season');
-INSERT INTO season VALUES(16, '2015/2016 Season');
+/*Data for seasons*/
+INSERT INTO seasons VALUES(11, '2010/2011 Season');
+INSERT INTO seasons VALUES(12, '2011/2012 Season');
+INSERT INTO seasons VALUES(13, '2012/2013 Season');
+INSERT INTO seasons VALUES(14, '2013/2014 Season');
+INSERT INTO seasons VALUES(15, '2014/2015 Season');
+INSERT INTO seasons VALUES(16, '2015/2016 Season');
+
+/*Data for stats*/
+INSERT INTO stats VALUES(1, 'Player Stats 2010/2011', 11);
+INSERT INTO stats VALUES(2, 'Club Stats 2010/2011', 11);
+INSERT INTO stats VALUES(3, 'Player Stats 2011/2012', 12);
+INSERT INTO stats VALUES(4, 'Club Stats 2011/2012', 12);
+INSERT INTO stats VALUES(5, 'Player Stats 2012/2013', 13);
+INSERT INTO stats VALUES(6, 'Club Stats 2012/2013', 13);
+INSERT INTO stats VALUES(7, 'Player Stats 2013/2014', 14);
+INSERT INTO stats VALUES(8, 'Club Stats 2013/2014', 14);
+INSERT INTO stats VALUES(9, 'Player Stats 2014/2015', 15);
+INSERT INTO stats VALUES(10, 'Club Stats 2014/2015', 15);
+INSERT INTO stats VALUES(11, 'Player Stats 2015/2016', 16);
+INSERT INTO stats VALUES(12, 'Club Stats 2015/2016', 16);
+
 
 
 /*1. What teams where in group A? in the 2011 season*/
