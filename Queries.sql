@@ -31,19 +31,24 @@ Where m_group='C';
 
 
 /*6. What teams won the final?*/
-
-
+Select m_winner
+From matches
+Where m_stage='Final';
 
 /*7. What were all the results of (pick a team)?*/
 
 
 
 /*8. What teams are from Spain and played in the knockout stage?*/
-
+Select c_name
+From club
+Where c_nationkey='Esp';
 
 
 /*9. What were the mations of the teams that played in the final?*/
-
+Select c_nationkey
+From club
+Where m_stage='Final';
 
 
 /*10. What teams played on (pick a date)?*/
