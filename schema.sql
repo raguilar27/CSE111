@@ -33,7 +33,6 @@ CREATE TABLE matches (
 
 CREATE TABLE club (
     c_clubkey INT NOT NULL,
-    c_seasonkey INT NOT NULL,
     c_name VARCHAR(50) NOT NULL,
     c_clubstatskey INT NOT NULL,
     c_nationkey INT NOT NULL
@@ -48,7 +47,8 @@ CREATE TABLE clubStats (
     cs_goalsFor INT NOT NULL,
     cs_goalsAgainst INT NOT NULL,
     cs_matchkey INT NOT NULL,
-    cs_statkey INT NOT NULL
+    cs_statkey INT NOT NULL,
+    cs_seasonkey INT NOT NULL
 );
 
 CREATE TABLE stats (
