@@ -1,3 +1,11 @@
+DROP TABLE season;
+DROP TABLE matches;
+DROP TABLE club;
+DROP TABLE clubStats;
+DROP TABLE stats;
+DROP TABLE playerStats;
+DROP TABLE nation;
+
 CREATE TABLE season (
     s_seasonkey INT PRIMARY KEY,
     s_name VARCHAR(25) not null
