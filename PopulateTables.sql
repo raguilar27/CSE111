@@ -165,3 +165,14 @@ INSERT INTO club VALUES(73, 'WERDER BREMEN', 11);
 INSERT INTO club VALUES(74, 'WOLFSBURG', 11);
 INSERT INTO club VALUES(75, 'ZENIT', 19);
 INSERT INTO club VALUES(76, 'ZILINA', 22);
+
+
+/*Data for club stats*/
+/*INSERT INTO clubStats VALUES(clubkey, gamesplayed, won, tied, lost, goalf for, against, statkey, seeasonkey);*/
+INSERT INTO clubStats VALUES('BARCELONA', 13, 9, 3, 1, 0, 0, 0, 2011);
+--INSERT INTO clubStats VALUES();
+
+
+/*Data for player stats*/
+--INSERT INTO playerStats VALUES(playerkey, statkey, name, apperances, goals, assists, nation);
+INSERT INTO playerStats VALUES(0, 0, 'Messi', 13, 12, 0, 'Argentina');
