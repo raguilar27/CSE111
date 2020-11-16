@@ -90,3 +90,15 @@ INSERT INTO nation VALUES(28, 'UKRAINE');
 
 /*Data for club*/
 INSERT INTO club VALUES(1, '',1 , 1);
+
+
+
+/*Data for club stats*/
+/*INSERT INTO clubStats VALUES(clubkey, gamesplayed, won, tied, lost, goalf for, against, statkey, seeasonkey);*/
+INSERT INTO clubStats VALUES('BARCELONA', 13, 9, 3, 1, 0, 0, 0, 2011);
+--INSERT INTO clubStats VALUES();
+
+
+/*Data for player stats*/
+--INSERT INTO playerStats VALUES(playerkey, statkey, name, apperances, goals, assists, nation);
+INSERT INTO playerStats VALUES(0, 0, 'Messi', 13, 12, 0, 'Argentina');
