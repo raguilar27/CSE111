@@ -4,14 +4,19 @@ FROM matches, club, clubStats, seasons
 WHERE m_group='A'
     AND s_name = '2010/2011 Season'
     AND s_seasonkey = cs_seasonkey
-    AND m_matchkey = cs_matchkey
+    AND s_seasonkey = m_seasonkey
     AND cs_clubkey = c_clubkey;
 
 
-/*2. What nation(s) where the teams from group C?*/
+/*2. What nation(s) where the teams from group C? in the 2011/2012 season*/
 SELECT DISTINCT n_name
 FROM club, nation, matches, clubStats
-WHERE ;
+WHERE m_group = 'C'
+    AND s_name = '2011/2012 Season'
+    AND s_seasonkey = cs_seasonkey
+    AND s_seasonkey = m_seasonkey
+    AND cs_clubkey = c_clubkey
+    AND c_nationkey = n_nationkey;
 
 
 /*3. What teams won games during the group stage?*/
@@ -26,10 +31,11 @@ WHERE ;
 
 
 
-/*6. What teams won the final?*/
-Select m_winner
-From matches
-Where m_stage='Final';
+/*6. What teams won the final in each season*/
+SELECT m_team1
+FROM matches
+WHERE m_round = 'Final';
+
 
 /*7. What were all the results of (pick a team)?*/
 
