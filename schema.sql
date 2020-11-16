@@ -15,7 +15,7 @@ CREATE TABLE matches (
     m_stage VARCHAR(25) not null,
     m_round VARCHAR(40) not null,
     m_group CHAR(5),
-    m_date VARCHAR(50) null,
+    m_date VARCHAR(50) not null,
     m_team1 VARCHAR (50) not null,
     m_FT VARCHAR (10) not null,
     m_HT VARCHAR (10) not null,
