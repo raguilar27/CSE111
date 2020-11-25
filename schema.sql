@@ -39,6 +39,7 @@ CREATE TABLE club (
 
 CREATE TABLE clubStats (
     cs_clubkey INT NOT NULL,
+    cs_name VARCHAR(50),
     cs_gamesPL INT NOT NULL,
     cs_gameW INT NOT NULL,
     cs_gameT INT NOT NULL,
