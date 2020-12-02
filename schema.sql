@@ -2,7 +2,6 @@ DROP TABLE season;
 DROP TABLE matches;
 DROP TABLE club;
 DROP TABLE clubStats;
-DROP TABLE stats;
 DROP TABLE playerStats;
 DROP TABLE nation;
 
@@ -46,13 +45,7 @@ CREATE TABLE clubStats (
     cs_gameL INT NOT NULL,
     cs_goalsFor INT NOT NULL,
     cs_goalsAgainst INT NOT NULL,
-    cs_statkey INT NOT NULL
-);
-
-CREATE TABLE stats (
-    st_statkey INT PRIMARY KEY,
-    st_statype VARCHAR(50),
-    st_seasoneky INT NOT NULL
+    cs_seasonkey INT NOT NULL
 );
 
 CREATE TABLE playerStats (
