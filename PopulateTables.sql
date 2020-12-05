@@ -112,6 +112,10 @@ INSERT INTO nation VALUES(25, 'SWEDEN');
 INSERT INTO nation VALUES(26, 'SWITZERLAND');
 INSERT INTO nation VALUES(27, 'TURKEY');
 INSERT INTO nation VALUES(28, 'UKRAINE');
+INSERT INTO nation VALUES(29, 'ARGENTINA');
+INSERT INTO nation VALUES(30, 'BRAZIL');
+INSERT INTO nation VALUES(31, 'CAMAROON');
+INSERT INTO nation VALUES(32, 'POLAND');
 
 /*Data for club*/
 INSERT INTO club VALUES(1, 'AC MILAN', 14);
@@ -389,5 +393,50 @@ INSERT INTO clubStats VALUES(76, 'ZILINA 10/11', 6, 0, 0, 6, 3, 19, 11);
 
 
 /*Data for player stats*/
---INSERT INTO playerStats VALUES(playerkey, statkey, name, apperances, goals, assists, nation);
-INSERT INTO playerStats VALUES(0, 0, 'Messi', 13, 12, 0, 'Argentina');
+--INSERT INTO playerStats VALUES(seasonkey, name, apperances, goals, club, nation);
+INSERT INTO playerStats VALUES(11, 'Lionel Messi', 13, 12, 11, 29);
+INSERT INTO playerStats VALUES(11, 'Samuel Eto', 0, 8, 37, 31);
+INSERT INTO playerStats VALUES(11, 'Mario Gomez', 0, 8, 14, 11);
+INSERT INTO playerStats VALUES(11, 'Dani Alves', 12, 0, 11, 30);
+INSERT INTO playerStats VALUES(11, 'Manuel Neuer', 12, 0, 14, 11);
+INSERT INTO playerStats VALUES(12, 'Lionel Messi', 0, 14, 11, 29);
+INSERT INTO playerStats VALUES(12, 'Mario Gomez', 0, 12, 14, 11);
+INSERT INTO playerStats VALUES(12, 'Cristiano Ronaldo', 0, 10, 57, 17);
+INSERT INTO playerStats VALUES(12, 'Petr Chech', 13, 0, 23, 7);
+INSERT INTO playerStats VALUES(12, 'Jerome Boateng', 13, 0, 14, 11);
+INSERT INTO playerStats VALUES(12, 'Manuel Neuer', 12, 0, 14, 11);
+INSERT INTO playerStats VALUES(13, 'Cristiano Ronaldo', 0, 12, 57, 17);
+INSERT INTO playerStats VALUES(13, 'Robert Lewandowski', 13, 10, 17, 32);
+INSERT INTO playerStats VALUES(13, 'Thomas Muller', 0, 8, 14, 11);
+INSERT INTO playerStats VALUES(13, 'Roman Weidenfeller', 13, 0, 17, 11);
+INSERT INTO playerStats VALUES(13, 'Manuel Neuer', 13, 0, 14, 11);
+INSERT INTO playerStats VALUES(14, 'Cristiano Ronaldo', 0, 17, 57, 17);
+INSERT INTO playerStats VALUES(14, 'Zlatan Ibrahimovic', 0, 10, 54, 25);
+INSERT INTO playerStats VALUES(14, 'Lionel Messi', 0, 8, 11, 29);
+INSERT INTO playerStats VALUES(14, 'Koke', 13, 0, 8, 24);
+INSERT INTO playerStats VALUES(14, 'Joao Miranda', 13, 0, 8, 30);
+INSERT INTO playerStats VALUES(14, 'Iker Casillas', 13, 0, 57, 24);
+INSERT INTO playerStats VALUES(15, 'Cristiano Ronaldo', 0, 10, 57, 17);
+INSERT INTO playerStats VALUES(15, 'Lionel Messi', 0, 10, 11, 29);
+INSERT INTO playerStats VALUES(15, 'Neymar', 0, 10, 11, 30);
+INSERT INTO playerStats VALUES(15, 'Marc-Andre ter Stegen', 13, 0, 11, 11);
+INSERT INTO playerStats VALUES(15, 'Gianluigi Buffon', 13, 0, 32, 14);
+INSERT INTO playerStats VALUES(15, 'Stephan Lichtsteiner', 13, 0, 32, 26);
+INSERT INTO playerStats VALUES(16, 'Cristiano Ronaldo', 0, 16, 57, 17);
+INSERT INTO playerStats VALUES(16, 'Robert Lewandowski', 0, 9, 14, 11);
+INSERT INTO playerStats VALUES(16, 'Thomas Muller', 0, 8, 14, 11);
+INSERT INTO playerStats VALUES(16, 'Gabi', 13, 0, 8, 24);
+INSERT INTO playerStats VALUES(16, 'Jan Oblak', 13, 0, 8, 23);
+INSERT INTO playerStats VALUES(16, 'Saul Niguez', 13, 0, 8, 24);
+
+
+
+
+
+
+
+
+
+
+
+

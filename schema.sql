@@ -49,6 +49,7 @@ CREATE TABLE playerStats (
     p_name VARCHAR(20),
     p_apperances INT,
     p_goals INT,
+    p_clubkey INT,
     p_nationkey INT
 );
 
