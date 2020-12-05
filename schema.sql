@@ -45,9 +45,8 @@ CREATE TABLE clubStats (
 );
 
 CREATE TABLE playerStats (
-    ps_playerkey INT NOT NULL,
-    ps_statkey INT NOT NULL,
-    p_name VARCHAR(20) NOT NULL,
+    p_seasonkey INT,
+    p_name VARCHAR(20),
     p_apperances INT,
     p_goals INT,
     p_assists INT,
