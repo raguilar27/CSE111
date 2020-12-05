@@ -10,31 +10,70 @@ DELETE FROM nation;
 .mode "csv"
 .separator ","
 .import '| tail -n +90 data/11champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 11
+WHERE m_date LIKE '%2010%'
+    OR m_date LIKE'%2011%';
 
 /*importing matches for 2011/2012 season*/
 .mode "csv"
 .separator ","
 .import '| tail -n +90 data/12champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 12
+WHERE m_date LIKE '%Sep 2011%'
+    OR m_date LIKE '%Oct 2011%'
+    OR m_date LIKE '%Nov 2011%'
+    OR m_date LIKE '%Dec 2011%'
+    OR m_date LIKE '%2012%';
 
 /*importing matches for 2012/2013 season*/
 .mode "csv"
 .separator ","
 .import '| tail -n +90 data/13champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 13
+WHERE m_date LIKE '%Sep 2012%'
+    OR m_date LIKE '%Oct 2012%'
+    OR m_date LIKE '%Nov 2012%'
+    OR m_date LIKE '%Dec 2012%'
+    OR m_date LIKE '%2013%';
 
 /*importing matches for 2013/2014 season*/
 .mode "csv"
 .separator ","
 .import '| tail -n +90 data/14champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 14
+WHERE m_date LIKE '%Sep 2013%'
+    OR m_date LIKE '%Oct 2013%'
+    OR m_date LIKE '%Nov 2013%'
+    OR m_date LIKE '%Dec 2013%'
+    OR m_date LIKE '%2014%';
 
 /*importing matches for 2014/2015 season*/
 .mode "csv"
 .separator ","
 .import '| tail -n +92 data/15champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 15
+WHERE m_date LIKE '%Sep 2014%'
+    OR m_date LIKE '%Oct 2014%'
+    OR m_date LIKE '%Nov 2014%'
+    OR m_date LIKE '%Dec 2014%'
+    OR m_date LIKE '%2015%';
 
 /*importing matches for 2015/2016 season*/
 .mode "csv"
 .separator ","
 .import '| tail -n +94 data/16champs.csv' matches
+UPDATE matches
+SET m_seasonkey = 16
+WHERE m_date LIKE '%Sep 2015%'
+    OR m_date LIKE '%Oct 2015%'
+    OR m_date LIKE '%Nov 2015%'
+    OR m_date LIKE '%Dec 2015%'
+    OR m_date LIKE '%2016%';
 
 /*Data for seasons*/
 INSERT INTO seasons VALUES(11, '2010/2011 Season');
