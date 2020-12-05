@@ -24,10 +24,6 @@ CREATE TABLE matches (
     m_penalties VARCHAR (20),
     m_comments VARCHAR (30),
     m_seasonkey INT,
-    m_matchkey INT,
-    m_winner VARCHAR(50),
-    m_loser VARCHAR(50),
-    m_tie VARCHAR (50)
 );
 
 CREATE TABLE club (
