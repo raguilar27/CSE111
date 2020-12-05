@@ -393,7 +393,6 @@ INSERT INTO clubStats VALUES(76, 'ZILINA 10/11', 6, 0, 0, 6, 3, 19, 11);
 
 
 /*Data for player stats*/
---INSERT INTO playerStats VALUES(seasonkey, name, apperances, goals, club, nation);
 INSERT INTO playerStats VALUES(11, 'Lionel Messi', 13, 12, 11, 29);
 INSERT INTO playerStats VALUES(11, 'Samuel Eto', 0, 8, 37, 31);
 INSERT INTO playerStats VALUES(11, 'Mario Gomez', 0, 8, 14, 11);
