@@ -11,19 +11,19 @@ CREATE TABLE seasons (
 );
 
 CREATE TABLE matches (
-    m_stage VARCHAR(25) not null,
-    m_round VARCHAR(40) not null,
+    m_stage VARCHAR(25), 
+    m_round VARCHAR(40),
     m_group CHAR(5),
-    m_date VARCHAR(50) not null,
-    m_team1 VARCHAR (50) not null,
-    m_FT VARCHAR (10) not null,
-    m_HT VARCHAR (10) not null,
-    m_team2 VARCHAR (50) not null,
+    m_date VARCHAR(50),
+    m_team1 VARCHAR (50),
+    m_FT VARCHAR (10),
+    m_HT VARCHAR (10),
+    m_team2 VARCHAR (50),
     m_agg VARCHAR (20),
     m_ET VARCHAR (20),
     m_penalties VARCHAR (20),
     m_comments VARCHAR (30),
-    m_seasonkey INT,
+    m_seasonkey INT
 );
 
 CREATE TABLE club (
