@@ -4,35 +4,35 @@ FROM seasons
 WHERE s_seasonkey = 11;
 
 --Matches in group stage 10/11
-SELECT m_group, m_team1, m_FT, m_team2
+SELECT m_group, m_date, m_team1, m_FT, m_team2
 FROM matches
 WHERE m_stage = 'Group'
     AND m_seasonkey = 11
 ORDER BY m_group;
 
 --Matches in round of 16 10/11
-SELECT m_round, m_team1, m_FT, m_team2, m_agg, m_comments
+SELECT m_round, m_date, m_team1, m_FT, m_team2, m_agg, m_comments
 FROM matches
 WHERE m_stage = 'Knockout'
     AND m_seasonkey = 11
     AND m_round LIKE 'Round of 16%';
 
 --Matches in QuarterFinals 10/11
-SELECT m_round, m_team1, m_FT, m_team2, m_agg, m_comments
+SELECT m_round, m_date, m_team1, m_FT, m_team2, m_agg, m_comments
 FROM matches
 WHERE m_stage = 'Knockout'
     AND m_seasonkey = 11
     AND m_round LIKE 'Quarterfinals%'; 
 
 --Matches in SemiFinals 10/11
-SELECT m_round, m_team1, m_FT, m_team2, m_agg, m_comments
+SELECT m_round, m_date, m_team1, m_FT, m_team2, m_agg, m_comments
 FROM matches
 WHERE m_stage = 'Knockout'
     AND m_seasonkey = 11
     AND m_round LIKE 'Semifinals%'; 
 
 --Matches in Finals 10/11
-SELECT m_round, m_team1, m_FT, m_team2, m_agg, m_comments
+SELECT m_round, m_date, m_team1, m_FT, m_team2, m_agg, m_comments
 FROM matches
 WHERE m_stage = 'Knockout'
     AND m_seasonkey = 11
