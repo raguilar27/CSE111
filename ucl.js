@@ -72,6 +72,16 @@ class UCL {
                 "AND m_round = 'Final'", [_seasonkey])
     }
 
+    clubParticipants(_seasonkey){
+        return this.all(
+            "SELECT c_name, n_name " +
+            "FROM clubStats, nation, club " +
+            "WHERE cs_clubkey = c_clubkey " +
+                "AND c_nationkey = n_nationkey " +
+                "AND cs_seasonkey = ? " +
+            "GROUP BY c_name", [_seasonkey])
+    }
+
     csName(_seasonkey){
         return this.all(
             "SELECT c_name, n_name, cs_gamesPL, cs_gameW, cs_gameT, cs_gameL, cs_goalsFor, cs_goalsAgainst " +
