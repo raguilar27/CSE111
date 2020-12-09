@@ -23,8 +23,8 @@
                        //console.log(response.data.data[x].maker);
      
                        option = document.createElement('option');
-                       option.value = response.data.data[x].maker;
-                       option.text = response.data.data[x].maker;
+                       option.value = response.data.data[x].season;
+                       option.text = response.data.data[x].season;
                        season.appendChild(option);
                     }
                  })
@@ -40,7 +40,7 @@
               var result = document.getElementById('result');
               result.innerHTML = "";
      
-              const API_URL = `http://127.0.0.1:8092/api/maker-prod/${selMaker}`;
+              const API_URL = `http://127.0.0.1:8092/api/seasons/${season}`;
               axios.get(`${API_URL}`)
                  .then(response => {
                     //console.log(response.data.data);
