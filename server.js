@@ -28,40 +28,13 @@ app.get("/", (req, res, next) => {
 });
 
 // Insert here other API endpoints
-app.get("/api/makers", (req, res, next) => {
-    computers.allMakers()
-        .then((makers) => {
-            res.json({
-                "message": "success",
-                "data": makers
-            })
-        })
-        .catch((err) => {
-            res.status(400).json({ "error": err.message });
-            return;
-        })
-});
-
-app.get("/api/maker-prod/:maker-:prod", (req, res, next) => {
-    if (req.params.prod == "All") {
-        computers.allProductsByMaker(req.params.maker)
-            .then((prods) => {
+app.get("/api/clubParticipants", (req, res, next) => {
+    if (req.params.clubParticipants == "All") {
+        ucl.clubParticipants(req.params._seasonkey)
+            .then((clubParticipants) => {
                 res.json({
-                    "message": `Products by ${req.params.maker}`,
-                    "data": prods
-                })
-            })
-            .catch((err) => {
-                res.status(400).json({ "error": err.message });
-                return;
-            })
-    }
-    else {
-        computers.productByMaker(req.params.prod, req.params.maker)
-            .then((prods) => {
-                res.json({
-                    "message": `${req.params.prod} by ${req.params.maker}`,
-                    "data": prods
+                    "message": `Clubs Participated ${req.params._seasonkey}`,
+                    "data": clubParticipants
                 })
             })
             .catch((err) => {
