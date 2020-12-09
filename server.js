@@ -28,6 +28,20 @@ app.get("/", (req, res, next) => {
 });
 
 // Insert here other API endpoints
+app.get("/api/seasons", (req, res, next) => {
+        ucl.populateSeason()
+            .then((seasons) => {
+                res.json({
+                    "message": `success`,
+                    "data":seasons
+                })
+            })
+            .catch((err) => {
+                res.status(400).json({ "error": err.message });
+                return;
+            })
+});
+
 app.get("/api/clubParticipants", (req, res, next) => {
     if (req.params.clubParticipants == "All") {
         ucl.clubParticipants(req.params._seasonkey)
