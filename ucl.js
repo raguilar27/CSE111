@@ -27,6 +27,12 @@ class UCL {
         })
     }
 
+    populateSeason(){
+        return this.all(
+            "SELECT s_name " +
+            "FROM seasons",[])
+    }
+
     matchesGroup(_seasonkey){
         return this.all(
             "SELECT m_group, m_date, m_team1, m_FT, m_team2 " +
