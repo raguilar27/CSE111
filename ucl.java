@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.Scanner;
 
 public class ucl{
     private Connection c = null;
@@ -219,6 +220,8 @@ public class ucl{
         
         sj.openConnection("data/data.sqlite");
 
+        Scanner sc = new Scanner(System.in);
+
         int _seasonkey = 0;
 
         System.out.println("Which season would you like to view?");
@@ -228,7 +231,8 @@ public class ucl{
         System.out.println("For Season 13/14, type 14");
         System.out.println("For Season 14/15, type 15");
         System.out.println("For Season 15/16, type 16");
-        
+        _seasonkey = sc.nextInt();
+
 
 
         sj.matchesGroup(_seasonkey);
