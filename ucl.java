@@ -673,27 +673,83 @@ public class ucl{
 
         System.out.println("Which season would you like to view?");
         sj.seasons();
-        _seasonkey = sc.nextInt();
 
+        if (sc.hasNextInt()){
+            _seasonkey = sc.nextInt();
+        }
 
-        //sj.matchesGroup(_seasonkey);
-        //sj.matches16(_seasonkey);
-        //sj.matchesQuarter(_seasonkey);
-        //sj.matchesSemi(_seasonkey);
-        //sj.matchesFinal(_seasonkey);
+        System.out.println("What option would you like to see?");
+        System.out.println("Enter 1, To see matches and standings from that season");
+        System.out.println("Enter 2, To see clubs that participated in that season");
+        System.out.println("Enter 3, To see the club stats from that season");
+        System.out.println("Enter 4, To see the player stats from that season");
 
-        //sj.clubParticipants(_seasonkey);
+        int option = -1;
 
-        //sj.csName(_seasonkey);
-        //sj.csGamesPlayed(_seasonkey);
-        //sj.csGamesWon(_seasonkey);
-        //sj.csGamesTied(_seasonkey);
-        //sj.csGamesLost(_seasonkey);
-        //sj.csGoalsFor(_seasonkey);
-        //sj.csGoalsAgainst(_seasonkey);
+        while(option < 1 || option > 5){
+            if(sc.hasNextInt()){
+                option = sc.nextInt();
+            }
+        }
 
-        //sj.psTopScorer(_seasonkey);
-        //sj.psMostApperances(_seasonkey);
+        switch(option){
+            case 1:
+                sj.matchesGroup(_seasonkey);
+                sj.matches16(_seasonkey);
+                sj.matchesQuarter(_seasonkey);
+                sj.matchesSemi(_seasonkey);
+                sj.matchesFinal(_seasonkey);
+                break;
+            case 2:
+                sj.clubParticipants(_seasonkey);
+                break;
+            case 3:
+                System.out.println("How would you like to see the Club Stats ordered by?");
+                System.out.println("Enter 1, To see club stats ordered by club name");
+                System.out.println("Enter 2, To see club stats ordered by games played");
+                System.out.println("Enter 3, To see club stats ordered by games won");
+                System.out.println("Enter 4, To see club stats ordered by games tied");
+                System.out.println("Enter 5, To see club stats ordered by games lost");
+                System.out.println("Enter 6, To see club stats ordered by goals scored");
+                System.out.println("Enter 7, To see club stats ordered by goals conceded");
+
+                int order = -1;
+
+                while(order < 1 || order > 8){
+                    if(sc.hasNextInt()){
+                        order = sc.nextInt();
+                    }
+                }
+
+                switch(order){
+                    case 1:
+                        sj.csName(_seasonkey);
+                        break;
+                    case 2:
+                        sj.csGamesPlayed(_seasonkey);
+                        break;
+                    case 3:
+                        sj.csGamesWon(_seasonkey);
+                        break;
+                    case 4:
+                        sj.csGamesTied(_seasonkey);
+                        break;
+                    case 5:
+                        sj.csGamesLost(_seasonkey);
+                        break;
+                    case 6:
+                        sj.csGoalsFor(_seasonkey);
+                        break;
+                    case 7:
+                        sj.csGoalsAgainst(_seasonkey);
+                        break;
+                }
+                break;
+            case 4:
+                sj.psTopScorer(_seasonkey);
+                sj.psMostApperances(_seasonkey);
+                break;
+        }
 
         sj.closeConnection();
     }
