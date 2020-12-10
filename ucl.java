@@ -721,10 +721,8 @@ public class ucl{
 
                     int order = -1;
 
-                    while(order < 1 || order > 8){
-                        if(sc.hasNextInt()){
-                            order = sc.nextInt();
-                        }
+                    if(sc.hasNextInt()){
+                        order = sc.nextInt();
                     }
 
                     switch(order){
@@ -749,6 +747,8 @@ public class ucl{
                         case 7:
                             sj.csGoalsAgainst(_seasonkey);
                             break;
+                        default:
+                            System.out.println("Choice must be a value between 1 and 7.");
                     }
                     input = true;
                     break;
@@ -757,14 +757,11 @@ public class ucl{
                     sj.psMostApperances(_seasonkey);
                     input = true;
                     break;
-                case 5:
-                    input = true;
-                    break;
                 default:
                     System.out.println("Choice must be a value between 1 and 4.");
                     input = false;
             }
-        }while (input == false);
+        }while (!input);
 
         sj.closeConnection();
     }
