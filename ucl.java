@@ -221,6 +221,16 @@ public class ucl{
 
         int _seasonkey = 0;
 
+        System.out.println("Which season would you like to view?");
+        System.out.println("For Season 10/11, type 11");
+        System.out.println("For Season 11/12, type 12");
+        System.out.println("For Season 12/13, type 13");
+        System.out.println("For Season 13/14, type 14");
+        System.out.println("For Season 14/15, type 15");
+        System.out.println("For Season 15/16, type 16");
+        
+
+
         sj.matchesGroup(_seasonkey);
 
 
