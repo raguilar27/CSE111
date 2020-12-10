@@ -171,7 +171,7 @@ class UCL {
 
     psMostApperances(_seasonkey){
         return this.all(
-            "SELECT p_name, p_goals, c_name, n_name " +
+            "SELECT p_name, p_apperances, c_name, n_name " +
             "FROM playerStats, club, nation " +
             "WHERE p_nationkey = n_nationkey " +
                 "AND c_clubkey = p_clubkey " +
