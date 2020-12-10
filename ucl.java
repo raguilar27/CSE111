@@ -678,7 +678,8 @@ public class ucl{
             _seasonkey = sc.nextInt();
             if(_seasonkey < 11 || _seasonkey > 16){
                 System.out.println("Choose a valid season.");
-                System.exit(0);
+                //System.exit(0);
+                sc.next();
             }
         }
 
@@ -764,7 +765,8 @@ public class ucl{
                 default:
                     System.out.println("Choice must be a value between 1 and 4.");
                     input = false;
-                    System.exit(0);
+                    //System.exit(0);
+                    sc.next();
             }
         }while (input == false);
 
