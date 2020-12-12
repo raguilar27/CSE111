@@ -676,12 +676,12 @@ public class ucl{
 
         if (sc.hasNextInt()){
             _seasonkey = sc.nextInt();
-            if(_seasonkey < 11 || _seasonkey > 16){
+            while (_seasonkey < 11 || _seasonkey > 16) {
                 System.out.println("Choose a valid season.");
-                //System.exit(0);
-                sc.next();
-            }
+                _seasonkey = sc.nextInt();
+            };
         }
+        
 
         System.out.println("What option would you like to see?");
         System.out.println("Enter 1, To see matches and standings from that season");
@@ -762,8 +762,6 @@ public class ucl{
                 default:
                     System.out.println("Choice must be a value between 1 and 4.");
                     input = false;
-                    //System.exit(0);
-                    sc.next();
             }
         }while (!input);
 
